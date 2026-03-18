@@ -10,4 +10,4 @@ symlink() {
 }
 
 symlink "tmux.conf" "$HOME/.tmux.conf"
-symlink "vimrc"     "$HOME/.vimrc"
+symlink ".vimrc"     "$HOME/.vimrc"
