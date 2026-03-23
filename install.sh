@@ -10,4 +10,11 @@ symlink() {
 }
 
 symlink "tmux.conf" "$HOME/.tmux.conf"
-symlink ".vimrc"     "$HOME/.vimrc"
+symlink ".vimrc" "$HOME/.vimrc"
+
+mkdir -p "$HOME/.config/nvim"
+symlink ".config/nvim" "$HOME/.config/nvim"
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
