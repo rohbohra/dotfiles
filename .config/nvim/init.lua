@@ -45,6 +45,17 @@ require("lazy").setup({
         })
         vim.lsp.enable("rust_analyzer")
       end
+
+      if vim.fn.executable("pyright-langserver") == 1 then
+        vim.lsp.config("pyright", {
+          settings = {
+            python = {
+              analysis = { typeCheckingMode = "off" },
+            },
+          },
+        })
+        vim.lsp.enable("pyright")
+      end
     end,
   },
 
